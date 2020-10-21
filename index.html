@@ -14,7 +14,7 @@
       <img id = "backgroundWaves" src="imgs/Wave-Blue.svg">
     </div>
 
-    <div id="loginPage" class="fakeClass show">
+    <div id="loginPage" style="display:none;">
       <div>
         <img class="login-logo" src="imgs/logoWithText.png">
       </div>
@@ -103,7 +103,7 @@
      auth.applyActionCode(actionCode).then(function(resp) {
        // Email address has been verified.
 
-       $('.login-box').addClass('.show');
+       $('.loginPage').addClass('.show');
 
        // You could also provide the user with a link back to the app.
 
