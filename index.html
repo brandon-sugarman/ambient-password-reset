@@ -74,7 +74,7 @@
    <script>
    document.addEventListener('DOMContentLoaded', function() {
      // TODO: Implement getParameterByName()
-
+console.log("function1");
      // Get the action to complete.
      var mode = getParameterByName('mode');
      // Get the one-time code from the query parameter.
@@ -133,6 +133,8 @@
    }
 
    function handleResetPassword(auth, actionCode, continueUrl, lang) {
+     console.log("function3");
+
      console.log("test");
      // Localize the UI to the selected language as determined by the lang
      // parameter.
@@ -172,6 +174,8 @@
 
 
    function getParameterByName(name, url = window.location.href) {
+     console.log("function2");
+
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
         results = regex.exec(url);
