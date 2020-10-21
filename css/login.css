@@ -86,6 +86,9 @@ body {
   display:inline !important;
 }
 
+.hide{
+  display: none  !important;
+}
 
 .login-box .user-box label {
   position: absolute;
