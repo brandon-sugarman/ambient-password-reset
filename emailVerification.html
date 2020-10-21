@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ambient</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <div style="overflow:hidden;/* horizontal */">
+<!--       <img style="position: absolute; top: -20px; left:-150px;  transform: scale(1);" src="imgs/Hero-Pattern.svg"> -->      
+
+      <img id = "backgroundWaves" src="imgs/Wave-Blue.svg">
+    </div>
+
+    <div id="loginPage" class="fakeClass show">
+      <div>
+        <img class="login-logo" src="imgs/logoWithText.png">
+      </div>
+      <div class="login-box">
+        <form >
+          <img style = " display: block;
+    margin-left: auto;
+    margin-right: auto;width: 230px; height: 170px;"src = "imgs/checkmark.gif">
+        <p style = "line-height: 23px;color: white; font-weight: 100;"> Congratulations! Your email has been verified. Press the button below to return to the website. </p>
+        <a value = "Login"> 
+           <span></span>
+           <span></span>
+            <span></span>
+          <span></span>
+        Return</a>
+      </form>
+      </div>
+    </div>
+
+    <!-- *********************************
+    *********************************
+    *********************************   
+    *********************************
+    *********************************
+    ********************************* -->
+
+    <div id="signupPage" class="fakeClass">
+      <div>
+        <img class="login-logo" src="imgs/logoWithText.png">
+    </div>
+      <div class="login-box">
+        <form onsubmit="return signupSubmit(event)" name="signupForm">  
+          <div class="user-box">
+            <input type="email" id="createEmail" name="" required="">
+            <label>E-mail</label>
+          </div>
+          <div class="user-box">
+            <input type="password" id="createPassword" name="" required="">
+            <label>Password</label>
+
+          </div>
+          <div class="user-box">
+            <input type="password" id="createPasswordConfirm" name="" required="">
+            <label>Confirm Password</label>
+          </div>
+
+          <div class="user-box">
+            <input name="firstName" id="createFirstName" required>
+            <label for="firstname">First Name</label> 
+          </div>
+
+           
+          <div class="user-box"> 
+            <input name="lastName" id="createLastName" required>
+            <label for="lastname">Last Name</label>  
+          </div>
+
+          <div class="user-box"> 
+            <input type="tel" name="phoneNumber" id="createPhoneNumber" required>
+            <label for="lastname">Phone Number</label> 
+          </div>
+         
+          <a onclick="submitForm(document.signupForm)" href="#" value="Create Account">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Sign Up
+          </a>
+             <a id = "switchToLogin" value="login"> Login Page </a>
+          
+
+        </form>        
+
+      </div>
+    </div>
+
+       <!-- *********************************
+    *********************************
+    *********************************
+    *********************************
+    *********************************
+    ********************************* -->
+
+
+    <div id="recoveryPage"  class="fakeClass">
+      <div>
+        <img class="login-logo" src="imgs/logoWithText.png">
+      </div>
+        <div class="login-box">
+          <form onsubmit="return recoverySubmit(event)" name="recoveryForm">  
+            <div class="user-box">
+              <input type="email" id="recoveryEmail" name="" required="">
+              <label>E-mail</label>
+            </div>
+
+            <a onclick="submitForm(document.recoveryForm)" href="#" value="Create Account">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Send Recovery Link
+            </a>
+               <a id = "switchToLoginFromRecover" value="login"> Login Page </a>
+            
+
+          </form>        
+
+     
+        </div>
+      </div>
+
+<!-- *********************************
+    *********************************
+    *********************************
+    *********************************
+    *********************************
+    ********************************* -->
+
+
+    <div id="verificationPage"  class="fakeClass">
+      <div>
+        <img class="login-logo" src="imgs/logoWithText.png">
+      </div>
+        <div class="login-box">
+          <form onsubmit="return recoverySubmit(event)" name="verifyForm">  
+            <div class="user-box">
+<!--               <div style = "padding: 10px;background-color: rgba(0, 256, 256, 0.3)">
+ -->                <label> Go to your inbox for _____ to verify your account. </label>
+<!--               </div>
+ -->                <br/>
+                <br/>
+                <br/>
+
+          </div>
+<!-- 
+            <div class="user-box">
+              <br/>
+
+              <label>  </label>
+            </div> -->
+
+            <a onclick="sendVerification()" href="#" value="Create Account">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Continue To Ambient
+            </a>
+              <a id = "resendVerification"> Resend Verification Link </a>
+               <a id = "switchToLoginFromVerify"> Log Out </a>
+            
+
+          </form>        
+
+     
+        </div>
+    </div>
+         
+
+
+    <!-- To let Jquery work: -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>  
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+
+    <script>
+      
+    </script>
+    <script src="./scripts/initFirebase.js"></script>
+
+    <script src = "./scripts/login.js"></script>
+
+  </body>
+</html>
+
+
+
