@@ -19,6 +19,22 @@ body {
 
 }
 
+#pwd {
+  margin-bottom: 8px;
+}
+
+.input-field{
+  border: none;
+  background-color: rgb(27,44,65);
+  color: white;
+  height: 32px;
+  width: 95%;
+  padding: 8px;
+}
+
+.input-field::placeholder{
+  color: rgba(256,256,256,.9);
+}
 
 
 .login-logo {
